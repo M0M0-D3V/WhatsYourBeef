@@ -15,7 +15,7 @@ const BeefRegionSchema = new mongoose.Schema(
         description: {
             type: String
         },
-
+        
     },
     { timestamps: true }
     
