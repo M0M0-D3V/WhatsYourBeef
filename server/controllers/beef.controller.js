@@ -1,11 +1,11 @@
 // Import model
-const Beef = require("../models/beef.model")
+const Models = require("../models/beef.model")
 
 // Export functions to be called in Routes
 module.exports = {
     // Create: Create one Beef
     create(req, res) {
-        Beef.create(req.body)
+        Models.Beef.create(req.body)
         .then((beef) => res.json(beef))
         .catch((err) => res.status(400).json(err));
     },
@@ -13,21 +13,21 @@ module.exports = {
     // Read: Get all Beef
     getAll(req, res) {
         // Blank .find param gets all
-        Beef.find({})
+        Models.Beef.find({})
         .then((beefs) => res.json(beefs))
         .catch((err) => res.status(400).json(err));
     },
 
     // Read: Get 1 Beef by ID
     getOne(req, res) {
-        Beef.findById({ _id: req.params.id })
+        Models.Beef.findById({ _id: req.params.id })
         .then((beef) => res.json(beef))
         .catch((err) => res.status(400).json(err));
     },
 
     // Update: Update one Beef by Id, rerunning validators on any changed fields
     update(req, res) {
-        Beef.findByIdAndUpdate(req.params.id, req.body, {
+        Models.Beef.findByIdAndUpdate(req.params.id, req.body, {
             runValidators: true,
             new: true,
         })
@@ -37,8 +37,18 @@ module.exports = {
 
     // Delete: Delete One Beef By Id
     delete(req, res) {
-        Beef.findByIdAndDelete(req.params.id)
+        Models.Beef.findByIdAndDelete(req.params.id)
         .then((deleteBeef) => res.json(deleteBeef))
+        .catch((err) => res.status(400).json(err));
+    },
+
+    // Read: Get all BeefRegions
+    getAllRegions(req, res) {
+        // Blank .find param gets all
+        Models.Region.find()
+        .then((regions) =>
+            console.log(regions),
+            res.json(regions))
         .catch((err) => res.status(400).json(err));
     },
 }
