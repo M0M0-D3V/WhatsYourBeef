@@ -4,24 +4,24 @@
 
 1. Locate in **File Explorer** the folder where Java 11 is installed:
 
-- (./images/image0.png)
+- <img src="images/image0.png" alt="image">
 
 2. Open **Windows** button and click the **Settings** button
 3. Should Open Settings:
 
-- (./images/image1.png)
+- <img src="images/image1.png" alt="image">
 
 4. Search for _environment_.. **Select Edit the system environment variables**
 
-- (./images/image2.png)
+- <img src="images/image2.png" alt="image">
 
 5. Should open System Properties. Next click **Advanced** tab and then click **Environment Variables** button:
 
-- (./images/image3.png)
+- <img src="images/image3.png" alt="image">
 
 6. Environment Variables are opened now...
 
-- (./images/image4.png)
+- <img src="images/image4.png" alt="image">
 
 7. Notice there are 2 sections:
    a. 1 is User variable
@@ -29,13 +29,13 @@
 8. Changes can be made to both. We will add _JAVA_HOME_ and add to _Path_ variables
 9. If JAVA_HOME is not there, you can click New to create it.
 
-- (./images/image5.png)
+- <img src="images/image5.png" alt="image">
 
 10. Write the variable name as _JAVA_HOME_ and variable value is the location path we found in the beginning. Copy and Paste the address in here.
 11. Press **OK**
 12. Next Select **Path** and click **Edit** and we are going to add the same variable to a list of existing sources
 
-- (./images/image6.png)
+- <img src="images/image6.png" alt="image">
 
 14. If you don't see the directly on the list, you can click New to add it in.
 15. Same Copy and Paste
@@ -48,6 +48,6 @@
 22. Double check your output:
 
 - GitBash:
-  - (./images/image7.png)
+  - <img src="images/image7.png" alt="image">
 - Command Prompt:
-  - (./images/image8.png)
+  - <img src="images/image8.png" alt="image">
