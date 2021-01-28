@@ -17,7 +17,7 @@ app.use(cors());
 require("./config/mongoose.config")(db_name);
 
 // Import routes function and execute
-require("./routes/beef.routes")(app);
+require("./routes/app.routes")(app);
 
 // Helper print to make sure port was activated
 app.listen(port, () => console.log(`Server is listening on port ${port}`));

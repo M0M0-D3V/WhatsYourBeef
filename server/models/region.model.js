@@ -5,22 +5,24 @@ const mongoose = require("mongoose");
 const requiredMsg = "{PATH} is required.";
 const minlengthMsg = "{PATH} must be at least {MINLENGTH} characters.";
 
-// Create Beef Schema
-const BeefSchema = new mongoose.Schema(
+const BeefRegionSchema = new mongoose.Schema(
     {
-        nameOfCut: {
-            type: String,
-            required: [true, requiredMsg],
-            minlength: [2, minlengthMsg],
+        nameOfRegion: {
+            type: String
         },
-        cookMethods: [String],
-        notes: [String],
+        description: {
+            type: String
+        },
+        cuts: [
+            BeefSchema
+        ]
     },
     { timestamps: true }
+    
 );
 
 // Create model, registering BeefSchema/BeefRegionSchema and creating BeefRegionSchema when we insert to it
-const Beef = mongoose.model("Beef", BeefSchema)
+const Region = mongoose.model("Region", BeefRegionSchema)
 
 // Export Beef Model to be used in Controller
 module.exports = Beef;
