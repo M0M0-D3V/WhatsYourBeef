@@ -5,13 +5,15 @@ const BeefController = require("../controllers/beef.controller")
 module.exports = (app) => {
     // beef
     app.post("/api/beef", BeefController.create);
+    app.post("/api/beef/cut", BeefController.createCut);
     app.get("/api/beef", BeefController.getAll);
     app.get("/api/beef/:id", BeefController.getOne);
     app.put("/api/beef/:id/update", BeefController.update);
     app.delete("/api/beef/:id/delete", BeefController.delete);
 
     // region
-    app.get("/api/beef/regions", BeefController.getAllRegions)
+    // app.post("/api/beef/region", BeefController.createRegion);
+    // app.get("/api/beef/regions", BeefController.getAllRegions)
 }
 
 // Format:
