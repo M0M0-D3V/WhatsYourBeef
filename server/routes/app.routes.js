@@ -12,8 +12,8 @@ module.exports = (app) => {
     app.delete("/api/beef/:id/delete", BeefController.delete);
 
     // region
-    // app.post("/api/beef/region", BeefController.createRegion);
-    // app.get("/api/beef/regions", BeefController.getAllRegions)
+    app.post("/api/beef/region", BeefController.createRegion);
+    app.get("/api/beef/region", BeefController.getAllRegions);
 }
 
 // Format:

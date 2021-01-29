@@ -1,6 +1,6 @@
 // Import model
 const Beef = require("../models/beef.model")
-// const Region = require("../models/region.model")
+const Region = require("../models/region.model")
 
 // Export functions to be called in Routes
 module.exports = {
@@ -20,6 +20,7 @@ module.exports = {
             {
                 runValidators: true,
                 new: true,
+                useFindAndModify: false
             }
         )
         .then((updatedRegion) => res.json(updatedRegion))
@@ -37,6 +38,7 @@ module.exports = {
     // Read: Get 1 Beef by ID
     getOne(req, res) {
         Beef.findById({ _id: req.params.id })
+        // .populate('region')
         .then((beef) => res.json(beef))
         .catch((err) => res.status(400).json(err));
     },
@@ -59,22 +61,22 @@ module.exports = {
         .catch((err) => res.status(400).json(err));
     },
 
-    // // Create: Create one Region
-    // createRegion(req, res) {
-    //     Region.create(req.body)
-    //     .then((region) => res.json(region))
-    //     .catch((err) => res.status(400).json(err));
-    // },
+    // Create: Create one Region
+    createRegion(req, res) {
+        console.log(req.body)
+        Region.create(req.body)
+        .then((region) => res.json(region))
+        .catch((err) => res.status(400).json(err));
+    },
 
-    // // Read: Get all BeefRegions
-    // getAllRegions(req, res) {
-    //     // Blank .find param gets all
-    //     Region.find()
-    //     .then((regions) => res.json(regions))
-    //     .then(console.log(res,regions))
-    //     .catch((err) => res.status(400).json(err), 
-    //     console.log(err));
-    // },
+    // Read: Get all BeefRegions
+    getAllRegions(req, res) {
+        // Blank .find param gets all
+        Region.find()
+        // .populate('beefCuts')
+        .then((region) => res.json(region))
+        .catch((err) => res.status(400).json(err)); 
+    },
 }
 
 // Format:

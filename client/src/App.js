@@ -1,10 +1,25 @@
-import './App.css';
+import React from "react";
+import { Paper } from "@material-ui/core";
+import { Link, Router, Redirect } from "@reach/router";
 
+import style from "./components/style.module.css";
+import NotFound from "./views/NotFound";
+import ChooseBeef from "./components/ChooseBeef"
 function App() {
   return (
-    <>
-    <h1>Hello</h1>
-    </>
+    <div>
+      <Paper elevation={3} className={style.padding}>
+        <h5>{/* Add Links here */}</h5>
+
+        <Router>
+          {/* Add Routes here */}
+          <ChooseBeef default/>
+          {/* <NotFound /> */}
+        </Router>
+
+{/* MAKE A CARD TO SHOW DETAILS OF EACH BEEF REGION */}
+      </Paper>
+    </div>
   );
 }
 

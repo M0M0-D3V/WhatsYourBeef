@@ -16,28 +16,28 @@ const BeefSchema = new Schema(
         },
         cookMethods: [String],
         notes: [String],
-        imgUrls: [String]
-        // region: {
-        //     type: Schema.Types.ObjectId,
-        //     ref: "Region"
-        // },
+        imgUrls: [String],
+        region: {
+            type: Schema.Types.ObjectId,
+            ref: 'Region'
+        },
     },
-    { timestamps: {createdAt: true } }
+    { timestamps: true }
 )
 
-const RegionSchema = new Schema(
-    {
-        nameOfRegion: String,
-        description: String,
-        beefCuts: [
-            BeefSchema
-        ]
-    },
-    {timestamps: true}
-)
+// const RegionSchema = new Schema(
+//     {
+//         nameOfRegion: String,
+//         description: String,
+//         beefCuts: [
+//             BeefSchema
+//         ]
+//     },
+//     {timestamps: true}
+// )
 
 // Create model, registering BeefSchema/BeefRegionSchema and creating BeefRegionSchema when we insert to it
-const Beef = mongoose.model("Beef", RegionSchema)
+const Beef = mongoose.model('Beef', BeefSchema)
 
 // Export Beef Model to be used in Controller
 module.exports = Beef
