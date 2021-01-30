@@ -8,10 +8,11 @@ const beefObject = {
                     "method":[
                     "Slow-Cook"
                     ],
-                    "other":[]
+                    "other":[],
+                    "imgUrl":"require('../images/Blade Chuck Roast.png')"
                 },
                 {
-                    "name":"Blade Chuck Steak*",
+                    "name":"Blade Chuck Steak",
                     "method":[
                         "Grill or Broil",
                         "Slow-Cook"
@@ -34,7 +35,7 @@ const beefObject = {
                     "other":[]
                 },
                 {
-                    "name":"Chuck Center Steak*",
+                    "name":"Chuck Center Steak",
                     "method":[
                         "Grill or Broil",
                         "Skillet",
@@ -90,7 +91,7 @@ const beefObject = {
                     "other":["Lean"]
                 },
                 {
-                    "name":"Shoulder Steak*",
+                    "name":"Shoulder Steak",
                     "method":[
                         "Grill or Broil",
                         "Skillet"
@@ -138,7 +139,7 @@ const beefObject = {
                     "other":["Lean"]
                 },
                 {
-                    "name":"Short Ribs, Bone-In",
+                    "name":"Short Ribs Bone-In",
                     "method":[
                         "Slow-Cook"
                     ],
@@ -150,14 +151,14 @@ const beefObject = {
             "name":"RIB",
             "cuts":[
                 {
-                    "name":"Ribeye Roast, Bone-In",
+                    "name":"Ribeye Roast Bone-In",
                     "method":[
                         "Roast"
                     ],
                     "other":[]
                 },
                 {
-                    "name":"Ribeye Steak, Bone-In",
+                    "name":"Ribeye Steak Bone-In",
                     "method":[
                         "Grill or Broil",
                         "Skillet"
@@ -172,14 +173,14 @@ const beefObject = {
                     "other":[]
                 },
                 {
-                    "name":"Ribeye Roast, Boneless",
+                    "name":"Ribeye Roast Boneless",
                     "method":[
                         "Roast"
                     ],
                     "other":[]
                 },
                 {
-                    "name":"Ribeye Steak, Boneless",
+                    "name":"Ribeye Steak Boneless",
                     "method":[
                         "Grill or Broil",
                         "Skillet"
@@ -240,7 +241,7 @@ const beefObject = {
                     "other":["Lean"]
                 },
                 {
-                    "name":"Strip Steak, Boneless",
+                    "name":"Strip Steak Boneless",
                     "method":[
                         "Grill or Broil",
                         "Skillet",
@@ -353,7 +354,7 @@ const beefObject = {
                     "other":[]
                 },
                 {
-                    "name":"Sirloin Bavette*",
+                    "name":"Sirloin Bavette",
                     "method":[
                         "Grill or Broil",
                         "Skillet",
@@ -367,7 +368,7 @@ const beefObject = {
             "name":"ROUND",
             "cuts":[
                 {
-                    "name":"Top Round Steak*",
+                    "name":"Top Round Steak",
                     "method":[
                         "Grill or Broil",
                         "Skillet",
@@ -384,7 +385,7 @@ const beefObject = {
                     "other":["Lean"]
                 },
                 {
-                    "name":"Bottom Round Steak*",
+                    "name":"Bottom Round Steak",
                     "method":[
                         "Grill or Broil",
                         "Skillet"
@@ -407,7 +408,7 @@ const beefObject = {
                     "other":["Lean"]
                 },
                 {
-                    "name":"Eye of Round Steak*",
+                    "name":"Eye of Round Steak",
                     "method":[
                         "Grill or Broil",
                         "Skillet",
@@ -440,7 +441,7 @@ const beefObject = {
             "name":"PLATE & FLANK",
             "cuts":[
                 {
-                    "name":"Skirt Steak*",
+                    "name":"Skirt Steak",
                     "method":[
                         "Grill or Broil",
                         "Skillet",
@@ -449,7 +450,7 @@ const beefObject = {
                     "other":["Marinate before cooking for best results"]
                 },
                 {
-                    "name":"Flank Steak*",
+                    "name":"Flank Steak",
                     "method":[
                         "Gril or Broil",
                         "Stir-Fry"
@@ -457,7 +458,7 @@ const beefObject = {
                     "other":["Lean"]
                 },
                 {
-                    "name":"Short Ribs, Bone-In*",
+                    "name":"Short Ribs, Bone-In",
                     "method":[
                         "Slow-Cook"
                     ],
@@ -469,7 +470,7 @@ const beefObject = {
             "name":"OTHER",
             "cuts":[
                 {
-                    "name":"Kabobs*",
+                    "name":"Kabobs",
                     "method":[
                         "Grill or Broil"
                     ],
