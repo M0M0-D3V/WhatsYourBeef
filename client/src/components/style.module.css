@@ -6,8 +6,9 @@
 
 body {
     width: 940px;
-    margin: 0 auto;
-    padding: 10px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: ivory;
 }
 
 .padding {
@@ -18,4 +19,56 @@ body {
     text-align: center;
     display: block;
     margin: 5px auto;
+}
+
+select.selectRegion {
+    width: 180px;
+    background-color: whitesmoke;
+    border: 0.5px solid #666;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 1.7em;
+    margin: 15px 15px 0 15px;
+}
+option {
+    line-height: 1.7em;
+}
+option:hover {
+    background-color: maroon;
+    transition: 0.3s;
+}
+div.cutCard {
+    width: 31%;
+    height: 280px;
+    border: 0.75px dotted lightgray;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    display: inline-block;
+    background-color: whitesmoke;
+    box-shadow: 2px 5px 10px #ccc;
+}
+
+select.selectRegion:hover, div.cutCard:hover {
+    background-color: lightyellow;
+    transition: 0.3s;
+}
+
+.cutCard img {
+    height: 70%;
+    vertical-align: top;
+}
+
+.cutCard p {
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+div.description {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    padding: 10px;
+    line-height: 1.5em;
+    text-indent:  2em;
+    margin: 15px;
 }
