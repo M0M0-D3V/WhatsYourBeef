@@ -5,6 +5,7 @@ import { Link, Router, Redirect } from "@reach/router";
 import style from "./components/style.module.css";
 import NotFound from "./views/NotFound";
 import ChooseBeef from "./components/ChooseBeef"
+import CutInfo from "./views/CutInfo"
 function App() {
   return (
     <div>
@@ -14,6 +15,7 @@ function App() {
         <Router>
           {/* Add Routes here */}
           <ChooseBeef default/>
+          <CutInfo path="cuts/info/:name/" />
           {/* <NotFound /> */}
         </Router>
 

@@ -2,6 +2,7 @@ import style from "./style.module.css";
 import cow from "../images/cow.png";
 import beefObject from "../helper/beefy";
 import { useEffect, useState } from "react";
+import { Link } from "@reach/router";
 
 const ChooseBeef = () => {
   const [regions, setRegions] = useState([]);
@@ -80,19 +81,22 @@ const ChooseBeef = () => {
       {cuts &&
         cuts.map((cut, idx) => {
           return (
-            <div className={style.cutCard} key={idx} onMouseEnter={() => {}}>
-              <p>{cut.name}</p>
-              <img
-                src={`https://my-beef-bucket.s3-us-west-1.amazonaws.com/${cut.name}.png`}
-                alt={cut.name}
-              />
-              <p>cooking methods:</p>
-              <ul>
-                {cut.method.map((method, idx) => {
-                  return <li>{method}</li>;
-                })}
-              </ul>
-            </div>
+            <Link to={`/cuts/info/${cut.name}`}>
+              <div className={style.cutCard} key={idx} onMouseEnter={() => {}}>
+                <p>{cut.name}</p>
+                <img
+                  src={`https://my-beef-bucket.s3-us-west-1.amazonaws.com/${cut.name}.png`}
+                  alt={cut.name}
+                />
+                <p>Click to see more info</p>
+                {/* <p>cooking methods:</p>
+                <ul>
+                  {cut.method.map((method, idx) => {
+                    return <li>{method}</li>;
+                  })}
+                </ul> */}
+              </div>
+            </Link>
           );
         })}
     </>
