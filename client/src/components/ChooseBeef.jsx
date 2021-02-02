@@ -55,7 +55,7 @@ const ChooseBeef = () => {
   return (
     <>
       {/* <div className={style.main}> */}
-      <h1>What's Your Beef?</h1>
+      <h1>{process.env.REACT_APP_TITLE}</h1>
       <h3>Pick a cow region...</h3>
       <img src={cow} alt="cow" className={style.centerImage} />
 
@@ -86,6 +86,12 @@ const ChooseBeef = () => {
                 src={`https://my-beef-bucket.s3-us-west-1.amazonaws.com/${cut.name}.png`}
                 alt={cut.name}
               />
+              <p>cooking methods:</p>
+              <ul>
+                {cut.method.map((method, idx) => {
+                  return <li>{method}</li>;
+                })}
+              </ul>
             </div>
           );
         })}
