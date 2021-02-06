@@ -32,7 +32,7 @@ const ChooseBeef = () => {
           setRegionIdx(index);
           rId = index;
           setCurrentRegion(regions[index]);
-          console.log(`regionIdx is now: ${regionIdx}`);
+          console.log(`regionIdx is now: ${index}`);
         }
       }
       // console.log(regions[regionIdx]["cuts"]);
