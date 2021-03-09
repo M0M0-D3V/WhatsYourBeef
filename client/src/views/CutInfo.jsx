@@ -43,7 +43,11 @@ export default ({ name }) => {
         alt={name}
       />
       <p>Info of cut: {name} here</p>
-      {thisCut.methods}
+      {thisCut.name}
+      {thisCut &&
+        thisCut.method.map((method, idx) => {
+          return { method };
+        })}
     </div>
   );
 };
