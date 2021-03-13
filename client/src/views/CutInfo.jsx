@@ -4,6 +4,7 @@ import axios from "axios";
 
 export default ({ name }) => {
   const [thisCut, setThisCut] = useState({});
+  const [methods, setMethods] = useState([]);
   const [wiki, setWiki] = useState();
   const [loaded, setLoaded] = useState(false);
 
@@ -15,16 +16,19 @@ export default ({ name }) => {
   }, []);
 
   const loadBeefCut = () => {
+    console.log(`made it here`);
     for (let rId in beefObject["regions"]) {
       for (let cId in beefObject["regions"][rId]["cuts"]) {
         if (beefObject["regions"][rId]["cuts"][cId]["name"] === name) {
           const thisObject = beefObject["regions"][rId]["cuts"][cId];
           setThisCut(thisObject);
+          setMethods(thisObject.method);
           console.log(rId, cId, name);
         }
       }
     }
   };
+
   // wiki: /page/summary/{title}
   const fetchCutFromWiki = () => {
     let tempName = name.toLowerCase();
@@ -42,12 +46,15 @@ export default ({ name }) => {
         src={`https://my-beef-bucket.s3-us-west-1.amazonaws.com/${name}.png`}
         alt={name}
       />
-      <p>Info of cut: {name} here</p>
-      {thisCut.name}
-      {thisCut &&
-        thisCut.method.map((method, idx) => {
-          return { method };
-        })}
+      <h2>{name}</h2>
+      <h3>Info here</h3>
+      <p class="lead">Cook Methods:</p>
+      <ul class="cookMethods">
+        {methods &&
+          methods.map((method, idx) => {
+            return <li>{method}</li>;
+          })}
+      </ul>
     </div>
   );
 };

@@ -44,7 +44,6 @@ const ChooseBeef = () => {
       //   console.log(`cutsArray: ${cutsArray[one]["name"]}`);
       // }
     }
-    console.log("regionIdx", regionIdx);
     setCuts(cutsArray);
   }, [showRegion]);
 
@@ -81,7 +80,7 @@ const ChooseBeef = () => {
       {cuts &&
         cuts.map((cut, idx) => {
           return (
-            <Link to={`/cuts/info/${cut.name}`}>
+            <Link key={idx} to={`/cuts/info/${cut.name}`}>
               <div className={style.cutCard} key={idx} onMouseEnter={() => {}}>
                 <p>{cut.name}</p>
                 <img
