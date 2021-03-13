@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import beefObject from "../helper/beefy";
 import axios from "axios";
+import style from "../components/style.module.css";
 
 export default ({ name }) => {
   const [thisCut, setThisCut] = useState({});
@@ -49,7 +50,7 @@ export default ({ name }) => {
       <h2>{name}</h2>
       <h3>Info here</h3>
       <p class="lead">Cook Methods:</p>
-      <ul class="cookMethods">
+      <ul class={style.cookMethods}>
         {methods &&
           methods.map((method, idx) => {
             return <li>{method}</li>;
