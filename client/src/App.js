@@ -4,8 +4,8 @@ import { Link, Router, Redirect } from "@reach/router";
 
 import style from "./components/style.module.css";
 import NotFound from "./views/NotFound";
-import ChooseBeef from "./components/ChooseBeef"
-import CutInfo from "./views/CutInfo"
+import ChooseBeef from "./components/ChooseBeef";
+import CutInfo from "./views/CutInfo";
 function App() {
   return (
     <div>
@@ -14,12 +14,12 @@ function App() {
 
         <Router>
           {/* Add Routes here */}
-          <ChooseBeef default/>
+          <ChooseBeef path="/" default />
           <CutInfo path="cuts/info/:name/" />
           {/* <NotFound /> */}
         </Router>
 
-{/* MAKE A CARD TO SHOW DETAILS OF EACH BEEF REGION */}
+        {/* MAKE A CARD TO SHOW DETAILS OF EACH BEEF REGION */}
       </Paper>
     </div>
   );

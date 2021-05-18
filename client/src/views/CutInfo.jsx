@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import beefObject from "../helper/beefy";
 import axios from "axios";
+import { Link } from "@reach/router";
 import style from "../components/style.module.css";
+import { FormHelperText } from "@material-ui/core";
 
 export default ({ name }) => {
   const [thisCut, setThisCut] = useState({});
@@ -53,9 +55,10 @@ export default ({ name }) => {
       <ul class={style.cookMethods}>
         {methods &&
           methods.map((method, idx) => {
-            return <li>{method}</li>;
+            return <li key={idx}>{method}</li>;
           })}
       </ul>
+      <Link to={"/"}>Go Back...</Link>
     </div>
   );
 };
